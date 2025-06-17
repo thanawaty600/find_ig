@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>IG Lookup</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; text-align: center; background-color: #f4f4f4; }
+        input, button { padding: 10px; font-size: 1rem; }
+        .result { margin-top: 20px; font-size: 1.2rem; color: #333; }
+    </style>
+</head>
+<body>
+    <h2>ค้นหา IG พี่รหัส</h2>
+    <p>ใส่รหัสพี่ เช่น A11, B43, C68</p>
+    <input type="text" id="codeInput" placeholder="ใส่รหัสพี่" />
+    <button onclick="lookup()">แสดง IG</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        const codes = [
+            "A11", "A12", "A13", "A14", "A15", "A16", "A17", "A18", "A19", "A20",
+            "A21", "A22", "A23", "A24", "A25", "A26", "A27", "A28", "A29", "A30",
+            "A31", "A32", "A33", "A34", "A35", "A36", "A37", "A38", "A39", "A40",
+            "A41", "A42", "A43",
+            "B43", "B44", "B45", "B46", "B47", "B48", "B49", "B50", "B51", "B52",
+            "B53", "B54", "B55", "B56", "B57", "B58", "B59", "B60", "B61", "B62",
+            "B63", "B64", "B65", "B66", "B67",
+            "C68", "C69", "C70", "C71", "C72", "C73", "C74", "C75", "C76", "C77",
+            "C78", "C79", "C80", "C81"
+        ];
+
+        const igMap = {};
+        codes.forEach(code => igMap[code] = "@ig_" + code + "nyp");
+
+        function lookup() {
+            const code = document.getElementById("codeInput").value.trim().toUpperCase();
+            const result = igMap[code];
+            document.getElementById("result").textContent = result ? "IG: " + result : "ไม่พบรหัสนี้";
+        }
+    </script>
+</body>
+</html>
