@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ค้นหา IG พี่รหัส</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    input, button { font-size: 18px; padding: 10px; margin: 10px; }
+    #result { margin-top: 20px; font-size: 20px; color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>ใส่รหัสพี่เพื่อดู IG</h2>
+  <input type="text" id="codeInput" placeholder="เช่น A11" />
+  <button onclick="showIG()">ดู IG</button>
+  <div id="result"></div>
+
+  <script>
+    const igData = {
+      A11: "@ig_a11nyp", A12: "@ig_a12nyp", A13: "@ig_a13nyp", A14: "@ig_a14nyp",
+      A15: "@ig_a15nyp", A16: "@ig_a16nyp", A17: "@ig_a17nyp", A18: "@ig_a18nyp",
+      A19: "@ig_a19nyp", A20: "@ig_a20nyp", A21: "@ig_a21nyp", A22: "@ig_a22nyp",
+      A23: "@ig_a23nyp", A24: "@ig_a24nyp", A25: "@ig_a25nyp", A26: "@ig_a26nyp",
+      A27: "@ig_a27nyp", A28: "@ig_a28nyp", A29: "@ig_a29nyp", A30: "@ig_a30nyp",
+      A31: "@ig_a31nyp", A32: "@ig_a32nyp", A33: "@ig_a33nyp", A34: "@ig_a34nyp",
+      A35: "@ig_a35nyp", A36: "@ig_a36nyp", A37: "@ig_a37nyp", A38: "@ig_a38nyp",
+      A39: "@ig_a39nyp", A40: "@ig_a40nyp", A41: "@ig_a41nyp", A42: "@ig_a42nyp",
+      A43: "@ig_a43nyp", B43: "@ig_b43nyp", B44: "@ig_b44nyp", B45: "@ig_b45nyp",
+      B46: "@ig_b46nyp", B47: "@ig_b47nyp", B48: "@ig_b48nyp", B49: "@ig_b49nyp",
+      B50: "@ig_b50nyp", B51: "@ig_b51nyp", B52: "@ig_b52nyp", B53: "@ig_b53nyp",
+      B54: "@ig_b54nyp", B55: "@ig_b55nyp", B56: "@ig_b56nyp", B57: "@ig_b57nyp",
+      B58: "@ig_b58nyp", B59: "@ig_b59nyp", B60: "@ig_b60nyp", B61: "@ig_b61nyp",
+      B62: "@ig_b62nyp", B63: "@ig_b63nyp", B64: "@ig_b64nyp", B65: "@ig_b65nyp",
+      B66: "@ig_b66nyp", B67: "@ig_b67nyp", B68: "@ig_b68nyp", C68: "@ig_c68nyp",
+      C69: "@ig_c69nyp", C70: "@ig_c70nyp", C71: "@ig_c71nyp", C72: "@ig_c72nyp",
+      C73: "@ig_c73nyp", C74: "@ig_c74nyp", C75: "@ig_c75nyp", C76: "@ig_c76nyp",
+      C77: "@ig_c77nyp", C78: "@ig_c78nyp", C79: "@ig_c79nyp", C80: "@ig_c80nyp",
+      C81: "@ig_c81nyp"
+    };
+
+    function showIG() {
+      const code = document.getElementById("codeInput").value.toUpperCase().trim();
+      const ig = igData[code];
+      const resultDiv = document.getElementById("result");
+      if (ig) {
+        resultDiv.textContent = "IG ของพี่รหัสนี้คือ: " + ig;
+      } else {
+        resultDiv.textContent = "ไม่พบรหัสนี้ ลองตรวจสอบอีกครั้ง";
+      }
+    }
+  </script>
+</body>
+</html>
